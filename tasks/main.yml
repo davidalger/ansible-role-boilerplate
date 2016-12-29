@@ -1,0 +1,21 @@
+- yum:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - perl
+    - man
+    - bash-completion
+    - pv
+    - git
+    - tree
+    - ack
+    - mail
+    - ps_mem
+- name: installing ntp
+  yum: name=ntp state=installed
+  notify: ntpd started
+- name: installing classyllama bash profile
+  copy:
+    src: etc/profile.d/classyllama.sh
+    dest: /etc/profile.d/classyllama.sh
+    mode: 0755
