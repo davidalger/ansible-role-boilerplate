@@ -9,7 +9,6 @@
     - git
     - tree
     - ack
-    - mail
     - ps_mem
 - name: installing ntp
   yum: name=ntp state=installed
