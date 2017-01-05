@@ -9,6 +9,12 @@
     - git
     - tree
 
+- name: yara package
+  package:
+    name: yara
+    state: present
+  failed_when: false    # ignore errors on this one since it might not exist everywhere
+
 - name: rhel packages
   package:
     name: "{{ item }}"
