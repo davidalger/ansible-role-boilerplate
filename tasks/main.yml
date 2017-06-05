@@ -41,7 +41,9 @@
     - ntp started (debian)
 
 - name: installing classyllama bash profile
-  copy:
-    src: etc/profile.d/classyllama.sh
+  template:
+    src: profile.d/classyllama.sh
     dest: /etc/profile.d/classyllama.sh
+    owner: root
+    group: root
     mode: 0755
