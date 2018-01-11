@@ -8,6 +8,7 @@
     - pv
     - git
     - tree
+    - lsof
 
 - name: yara package
   package:
