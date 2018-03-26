@@ -10,6 +10,7 @@
     - tree
     - lsof
     - mailx
+    - patch
 
 - name: yara package
   package:
