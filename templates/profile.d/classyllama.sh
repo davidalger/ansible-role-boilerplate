@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# {{ ansible_managed_header }}
 # {{ ansible_managed }}
 
 # Configure PS1 with flashing username and red path for root login
