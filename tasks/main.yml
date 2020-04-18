@@ -15,6 +15,7 @@
       - perl
       - ps_mem
       - pv        # requires epel-release
+      - pwgen
       - tree
     state: present
 
