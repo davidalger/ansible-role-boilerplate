@@ -17,6 +17,7 @@
       - pv        # requires epel-release
       - pwgen
       - tree
+      - wget
     state: present
 
 - name: installing chrony
