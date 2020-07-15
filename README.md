@@ -1,6 +1,6 @@
 # Ansible Role: Boilerpate
 
-[![Build Status](https://travis-ci.org/davidalger/ansible-role-boilerplate.svg?branch=master)](https://travis-ci.org/davidalger/ansible-role-boilerplate)
+[![Build Status](https://travis-ci.com/davidalger/ansible-role-boilerplate.svg?branch=master)](https://travis-ci.com/davidalger/ansible-role-boilerplate)
 
 Installs boilerplate shell configuration and base set of additional utility packages such as `htop`, `lsof` and `pwgen`. See `tasks/main.yml` for complete list.
 
