@@ -8,10 +8,6 @@ else
     export PS1='\[\033[0;5m\]\u@\h\[\033[0m\]:\[\033[0;31m\]\w\[\033[0m\]# '
 fi
 
-# Enable full-color shell output
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-
 # Setup history search ability (only bind when a tty is present)
 if [ -t 1 ]; then
     bind '"\e[A":history-search-backward'
