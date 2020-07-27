@@ -1,23 +1,10 @@
 ---
 - name: Install packages
   package:
-    name:
-      - ack
-      - bash-completion
-      - git
-      - htop      # requires epel-release
-      - iftop     # requires epel-release
-      - jq
-      - lsof
-      - mailx
-      - man
-      - patch
-      - perl
-      - ps_mem
-      - pv        # requires epel-release
-      - pwgen
-      - tree
-      - wget
+    name: "{{ boilerplate_packages|union({
+        'RedHat': boilerplate_packages_redhat,
+        'Debian': boilerplate_packages_debian
+      }[ansible_os_family]) }}"
     state: present
 
 - name: Installing chrony
@@ -34,4 +21,4 @@
     dest: /etc/profile.d/boilerplate.sh
     owner: root
     group: root
-    mode: 0755
+    mode: "0755"

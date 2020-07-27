@@ -1,0 +1,23 @@
+---
+boilerplate_packages:
+  - ack
+  - bash-completion
+  - git
+  - htop      # requires epel-release
+  - iftop     # requires epel-release
+  - jq
+  - lsof
+  - man
+  - patch
+  - perl
+  - pv        # requires epel-release
+  - pwgen
+  - tree
+  - wget
+
+boilerplate_packages_redhat:
+  - ps_mem
+  - mailx
+
+boilerplate_packages_debian:
+  - mailutils
