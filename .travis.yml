@@ -8,6 +8,7 @@ env:
     - ROLE_NAME: davidalger.boilerplate
 
   matrix:
+    - MOLECULE_DISTRO: fedora32
     - MOLECULE_DISTRO: centos8
     - MOLECULE_DISTRO: centos7
 

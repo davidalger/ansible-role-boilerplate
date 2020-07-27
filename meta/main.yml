@@ -1,15 +1,22 @@
 ---
 dependencies:
-  - {role: geerlingguy.repo-epel, when: use_geerlingguy_repo_epel | default(true)}
+  - role: geerlingguy.repo-epel
+    when:
+      - use_geerlingguy_repo_epel|default(true)
+      - ansible_os_family == 'RedHat' and ansible_distribution != "Fedora"
 
 galaxy_info:
   role_name: boilerplate
   author: David Alger
-  description: Boilerplate Config for RHEL / CentOS
+  description: Boilerplate system config for Linux
   license: MIT
   min_ansible_version: 2.4
 
   platforms:
+    - name: Fedora
+      versions:
+        - all
+        - 31
     - name: EL
       versions:
         - 8

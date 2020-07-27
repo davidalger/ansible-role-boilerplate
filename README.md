@@ -14,7 +14,7 @@ None.
 
 ## Dependencies
 
-* `geerlingguy.repo-epel`
+* `geerlingguy.repo-epel` (RedHat/CentOS and derivatives)
 
 ## Example Playbook
 

@@ -1,5 +1,5 @@
 ---
-- name: install packages
+- name: Install packages
   package:
     name:
       - ack
@@ -20,14 +20,15 @@
       - wget
     state: present
 
-- name: installing chrony
+- name: Installing chrony
   package:
     name: chrony
     state: present
   notify:
     - chronyd started
+  when: ansible_os_family == 'RedHat'
 
-- name: installing boilerplate bash profile
+- name: Install profile.d/boilerplate.sh
   template:
     src: profile.d/boilerplate.sh
     dest: /etc/profile.d/boilerplate.sh
